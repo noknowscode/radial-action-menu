@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__uno__uno_platform_agent_rules_init",
+      "mcp__uno__uno_platform_usage_rules_init",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Platform006\\\\OneDrive - Uno Platform\\\\Desktop\\\\unOS\\\\UnoAgent\\\\AI-Projects\\\\radial-action-menu\\\\src\\\\RadialActionMenuDemo\\\\Controls\\\\SolarSystemMenu.xaml\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Platform006\\\\OneDrive - Uno Platform\\\\Desktop\\\\unOS\\\\UnoAgent\\\\AI-Projects\\\\radial-action-menu\\\\src\\\\RadialActionMenuDemo\\\\Controls\\\\SolarSystemMenu.xaml.cs\" -Force)",
+      "Bash(del \"C:\\\\Users\\\\Platform006\\\\OneDrive - Uno Platform\\\\Desktop\\\\unOS\\\\UnoAgent\\\\AI-Projects\\\\radial-action-menu\\\\src\\\\RadialActionMenuDemo\\\\Controls\\\\SolarSystemMenu.xaml\")",
+      "Bash(del \"C:\\\\Users\\\\Platform006\\\\OneDrive - Uno Platform\\\\Desktop\\\\unOS\\\\UnoAgent\\\\AI-Projects\\\\radial-action-menu\\\\src\\\\RadialActionMenuDemo\\\\Controls\\\\SolarSystemMenu.xaml.cs\")",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(dotnet build:*)",
+      "Bash($env:DOTNET_MODIFIABLE_ASSEMBLIES = \"debug\")",
+      "Bash(Start-Job { dotnet run -f net9.0-desktop --project \"C:\\\\Users\\\\Platform006\\\\OneDrive - Uno Platform\\\\Desktop\\\\unOS\\\\UnoAgent\\\\AI-Projects\\\\radial-action-menu\\\\src\\\\RadialActionMenuDemo\\\\RadialActionMenuDemo.csproj\" })",
+      "Bash(Start-Sleep -Seconds 5)",
+      "Bash(Get-Job)",
+      "Bash(Receive-Job)",
+      "Bash(dotnet run:*)",
+      "Bash(Get-Process)",
+      "Bash(Where-Object { $_ProcessName -like \"*RadialActionMenuDemo*\" })",
+      "Bash(git add:*)"
+    ]
+  }
+}
