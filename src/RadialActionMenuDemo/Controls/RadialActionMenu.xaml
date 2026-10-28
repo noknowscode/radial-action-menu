@@ -5,29 +5,25 @@
              AutomationProperties.Name="Actions menu">
 
     <Grid x:Name="RootGrid">
-        <!-- Backdrop overlay - semi-transparent -->
+        <!-- Backdrop overlay - dark CRT fade -->
         <Border x:Name="Backdrop"
-                Background="#40000000"
+                Background="#C0000000"
                 Opacity="0"
                 IsHitTestVisible="False"/>
 
-        <!-- Menu items container - positioned based on Position property -->
+        <!-- Menu items container -->
         <Canvas x:Name="MenuCanvas">
             <!-- Item 0 -->
             <Border x:Name="MenuItem0"
                     Width="48"
                     Height="48"
-                    CornerRadius="24"
-                    Background="#F5F5F5"
-                    BorderBrush="#E0E0E0"
-                    BorderThickness="1"
+                    CornerRadius="0"
+                    Background="{ThemeResource SurfaceBrush}"
+                    BorderBrush="{ThemeResource PrimaryBrush}"
+                    BorderThickness="2"
                     Opacity="0"
                     IsHitTestVisible="False"
-                    Translation="0,0,10"
                     RenderTransformOrigin="0.5,0.5">
-                <Border.Shadow>
-                    <ThemeShadow/>
-                </Border.Shadow>
                 <Border.RenderTransform>
                     <CompositeTransform x:Name="MenuItem0Transform" ScaleX="0" ScaleY="0" Rotation="-180"/>
                 </Border.RenderTransform>
@@ -43,7 +39,7 @@
                     <FontIcon x:Name="MenuItem0Icon"
                               Glyph="&#xE72D;"
                               FontSize="20"
-                              Foreground="#1F1F1F"/>
+                              Foreground="{ThemeResource PrimaryBrush}"/>
                 </Button>
             </Border>
 
@@ -51,17 +47,13 @@
             <Border x:Name="MenuItem1"
                     Width="48"
                     Height="48"
-                    CornerRadius="24"
-                    Background="#F5F5F5"
-                    BorderBrush="#E0E0E0"
-                    BorderThickness="1"
+                    CornerRadius="0"
+                    Background="{ThemeResource SurfaceBrush}"
+                    BorderBrush="{ThemeResource PrimaryBrush}"
+                    BorderThickness="2"
                     Opacity="0"
                     IsHitTestVisible="False"
-                    Translation="0,0,10"
                     RenderTransformOrigin="0.5,0.5">
-                <Border.Shadow>
-                    <ThemeShadow/>
-                </Border.Shadow>
                 <Border.RenderTransform>
                     <CompositeTransform x:Name="MenuItem1Transform" ScaleX="0" ScaleY="0" Rotation="-180"/>
                 </Border.RenderTransform>
@@ -77,7 +69,7 @@
                     <FontIcon x:Name="MenuItem1Icon"
                               Glyph="&#xE70F;"
                               FontSize="20"
-                              Foreground="#1F1F1F"/>
+                              Foreground="{ThemeResource PrimaryBrush}"/>
                 </Button>
             </Border>
 
@@ -85,17 +77,13 @@
             <Border x:Name="MenuItem2"
                     Width="48"
                     Height="48"
-                    CornerRadius="24"
-                    Background="#F5F5F5"
-                    BorderBrush="#E0E0E0"
-                    BorderThickness="1"
+                    CornerRadius="0"
+                    Background="{ThemeResource SurfaceBrush}"
+                    BorderBrush="{ThemeResource PrimaryBrush}"
+                    BorderThickness="2"
                     Opacity="0"
                     IsHitTestVisible="False"
-                    Translation="0,0,10"
                     RenderTransformOrigin="0.5,0.5">
-                <Border.Shadow>
-                    <ThemeShadow/>
-                </Border.Shadow>
                 <Border.RenderTransform>
                     <CompositeTransform x:Name="MenuItem2Transform" ScaleX="0" ScaleY="0" Rotation="-180"/>
                 </Border.RenderTransform>
@@ -111,7 +99,7 @@
                     <FontIcon x:Name="MenuItem2Icon"
                               Glyph="&#xE74D;"
                               FontSize="20"
-                              Foreground="#1F1F1F"/>
+                              Foreground="{ThemeResource PrimaryBrush}"/>
                 </Button>
             </Border>
 
@@ -119,17 +107,13 @@
             <Border x:Name="MenuItem3"
                     Width="48"
                     Height="48"
-                    CornerRadius="24"
-                    Background="#F5F5F5"
-                    BorderBrush="#E0E0E0"
-                    BorderThickness="1"
+                    CornerRadius="0"
+                    Background="{ThemeResource SurfaceBrush}"
+                    BorderBrush="{ThemeResource PrimaryBrush}"
+                    BorderThickness="2"
                     Opacity="0"
                     IsHitTestVisible="False"
-                    Translation="0,0,10"
                     RenderTransformOrigin="0.5,0.5">
-                <Border.Shadow>
-                    <ThemeShadow/>
-                </Border.Shadow>
                 <Border.RenderTransform>
                     <CompositeTransform x:Name="MenuItem3Transform" ScaleX="0" ScaleY="0" Rotation="-180"/>
                 </Border.RenderTransform>
@@ -145,7 +129,7 @@
                     <FontIcon x:Name="MenuItem3Icon"
                               Glyph="&#xE734;"
                               FontSize="20"
-                              Foreground="#1F1F1F"/>
+                              Foreground="{ThemeResource PrimaryBrush}"/>
                 </Button>
             </Border>
 
@@ -153,17 +137,13 @@
             <Border x:Name="MenuItem4"
                     Width="48"
                     Height="48"
-                    CornerRadius="24"
-                    Background="#F5F5F5"
-                    BorderBrush="#E0E0E0"
-                    BorderThickness="1"
+                    CornerRadius="0"
+                    Background="{ThemeResource SurfaceBrush}"
+                    BorderBrush="{ThemeResource PrimaryBrush}"
+                    BorderThickness="2"
                     Opacity="0"
                     IsHitTestVisible="False"
-                    Translation="0,0,10"
                     RenderTransformOrigin="0.5,0.5">
-                <Border.Shadow>
-                    <ThemeShadow/>
-                </Border.Shadow>
                 <Border.RenderTransform>
                     <CompositeTransform x:Name="MenuItem4Transform" ScaleX="0" ScaleY="0" Rotation="-180"/>
                 </Border.RenderTransform>
@@ -179,15 +159,15 @@
                     <FontIcon x:Name="MenuItem4Icon"
                               Glyph="&#xE713;"
                               FontSize="20"
-                              Foreground="#1F1F1F"/>
+                              Foreground="{ThemeResource PrimaryBrush}"/>
                 </Button>
             </Border>
 
-            <!-- Pulse Ring (expands and fades on open) -->
+            <!-- Pulse Ring - square pixel burst -->
             <Ellipse x:Name="PulseRing"
                      Width="56"
                      Height="56"
-                     Stroke="#1F1F1F"
+                     Stroke="{ThemeResource PrimaryBrush}"
                      StrokeThickness="3"
                      Opacity="0"
                      IsHitTestVisible="False"
@@ -197,17 +177,15 @@
                 </Ellipse.RenderTransform>
             </Ellipse>
 
-            <!-- Trigger FAB Button -->
+            <!-- Trigger FAB Button - square pixel style -->
             <Border x:Name="TriggerBorder"
                     Width="56"
                     Height="56"
-                    CornerRadius="28"
-                    Background="#1F1F1F"
-                    Translation="0,0,10"
+                    CornerRadius="0"
+                    Background="{ThemeResource SurfaceBrush}"
+                    BorderBrush="{ThemeResource PrimaryBrush}"
+                    BorderThickness="2"
                     RenderTransformOrigin="0.5,0.5">
-                <Border.Shadow>
-                    <ThemeShadow/>
-                </Border.Shadow>
                 <Border.RenderTransform>
                     <CompositeTransform x:Name="TriggerTransform"/>
                 </Border.RenderTransform>
@@ -225,7 +203,7 @@
                         <FontIcon x:Name="PlusIcon"
                                   Glyph="&#xE710;"
                                   FontSize="24"
-                                  Foreground="White"
+                                  Foreground="{ThemeResource PrimaryBrush}"
                                   RenderTransformOrigin="0.5,0.5">
                             <FontIcon.RenderTransform>
                                 <RotateTransform x:Name="PlusIconRotation"/>
