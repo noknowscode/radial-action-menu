@@ -5,5 +5,6 @@ public enum MenuPosition
     BottomRight,
     BottomLeft,
     TopRight,
-    TopLeft
+    TopLeft,
+    Center
 }

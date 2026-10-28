@@ -69,10 +69,35 @@ public sealed partial class MainPage : Page
                 Label = "Favorite"
             }
         };
+
+        // Initialize the CENTER radial menu with 4 items (arcs directly above)
+        CenterRadialMenu.Items = new ObservableCollection<RadialMenuItemData>
+        {
+            new RadialMenuItemData
+            {
+                Glyph = "\uE8B7", // Folder
+                Label = "Files"
+            },
+            new RadialMenuItemData
+            {
+                Glyph = "\uE7C3", // Camera
+                Label = "Camera"
+            },
+            new RadialMenuItemData
+            {
+                Glyph = "\uE718", // Attach
+                Label = "Attach"
+            },
+            new RadialMenuItemData
+            {
+                Glyph = "\uE786", // Microphone
+                Label = "Record"
+            }
+        };
     }
 
     private void OnRadialMenuItemSelected(object sender, RadialMenuItemData e)
     {
-        ActionFeedback.Text = $"{e.Label} action selected!";
+        ActionFeedback.Text = $"> {e.Label.ToUpperInvariant()}_EXEC";
     }
 }

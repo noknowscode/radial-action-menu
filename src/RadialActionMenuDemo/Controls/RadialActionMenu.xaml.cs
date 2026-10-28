@@ -237,12 +237,14 @@ public sealed partial class RadialActionMenu : UserControl
         {
             MenuPosition.BottomRight or MenuPosition.TopRight => ActualWidth - TriggerSize - DefaultMargin,
             MenuPosition.BottomLeft or MenuPosition.TopLeft => DefaultMargin,
+            MenuPosition.Center => (ActualWidth - TriggerSize) / 2,
             _ => ActualWidth - TriggerSize - DefaultMargin
         };
 
         var triggerY = Position switch
         {
             MenuPosition.BottomRight or MenuPosition.BottomLeft => ActualHeight - TriggerSize - DefaultMargin,
+            MenuPosition.Center => (ActualHeight - TriggerSize) / 2,
             MenuPosition.TopRight or MenuPosition.TopLeft => DefaultMargin,
             _ => ActualHeight - TriggerSize - DefaultMargin
         };
@@ -301,6 +303,7 @@ public sealed partial class RadialActionMenu : UserControl
             MenuPosition.BottomLeft => (270, 360),
             MenuPosition.TopRight => (90, 180),
             MenuPosition.TopLeft => (0, 90),
+            MenuPosition.Center => (225, 315),
             _ => (180, 270)
         };
     }

@@ -12,46 +12,75 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <!-- Header -->
             <StackPanel Grid.Row="0"
-                        Padding="24,48,24,24"
+                        Padding="24,48,24,16"
                         Spacing="8">
-                <TextBlock Text="Radial Action Menu"
+                <TextBlock Text="&gt; RADIAL_ACTION_MENU"
                            Style="{StaticResource HeadlineMedium}"
-                           Foreground="{ThemeResource OnBackgroundBrush}"/>
-                <TextBlock Text="Tap the FAB buttons in the bottom corners to see the radial action menus."
+                           Foreground="{ThemeResource PrimaryBrush}"/>
+                <TextBlock Text="// tap FAB triggers to deploy radial menus"
                            Style="{StaticResource BodyMedium}"
                            Foreground="{ThemeResource OnSurfaceVariantBrush}"
                            TextWrapping="Wrap"/>
             </StackPanel>
 
-            <!-- Demo content placeholder -->
-            <Grid Grid.Row="1"
+            <!-- Dither separator band -->
+            <Canvas Grid.Row="1" Height="8" HorizontalAlignment="Stretch">
+                <Line X1="0" Y1="2" X2="2000" Y2="2"
+                      Stroke="{ThemeResource PrimaryBrush}"
+                      StrokeThickness="4"
+                      StrokeDashArray="1 1"
+                      Opacity="0.6"/>
+                <Line X1="4" Y1="6" X2="2004" Y2="6"
+                      Stroke="{ThemeResource PrimaryBrush}"
+                      StrokeThickness="4"
+                      StrokeDashArray="1 1"
+                      Opacity="0.3"/>
+            </Canvas>
+
+            <!-- Demo content area -->
+            <Grid Grid.Row="2"
                   Padding="24">
                 <Border Background="{ThemeResource SurfaceVariantBrush}"
-                        CornerRadius="16"
+                        CornerRadius="0"
+                        BorderBrush="{ThemeResource OutlineBrush}"
+                        BorderThickness="2"
                         Padding="24">
                     <StackPanel VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 Spacing="16">
-                        <FontIcon Glyph="&#xE8B7;"
-                                  FontSize="48"
-                                  Foreground="{ThemeResource OnSurfaceVariantBrush}"/>
                         <TextBlock x:Name="ActionFeedback"
-                                   Text="Your content goes here"
+                                   Text="READY_"
                                    Style="{StaticResource TitleMedium}"
-                                   Foreground="{ThemeResource OnSurfaceVariantBrush}"
+                                   Foreground="{ThemeResource PrimaryBrush}"
                                    HorizontalAlignment="Center"/>
-                        <TextBlock Text="Try the radial menus"
+                        <TextBlock Text="[ awaiting input ]"
                                    Style="{StaticResource BodySmall}"
-                                   Foreground="{ThemeResource OutlineBrush}"
+                                   Foreground="{ThemeResource OnSurfaceVariantBrush}"
                                    HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Border>
             </Grid>
+
+            <!-- Bottom dither separator band -->
+            <Canvas Grid.Row="3" Height="8" HorizontalAlignment="Stretch">
+                <Line X1="0" Y1="2" X2="2000" Y2="2"
+                      Stroke="{ThemeResource PrimaryBrush}"
+                      StrokeThickness="4"
+                      StrokeDashArray="1 1"
+                      Opacity="0.3"/>
+                <Line X1="4" Y1="6" X2="2004" Y2="6"
+                      Stroke="{ThemeResource PrimaryBrush}"
+                      StrokeThickness="4"
+                      StrokeDashArray="1 1"
+                      Opacity="0.6"/>
+            </Canvas>
         </Grid>
 
         <!-- Left Radial Action Menu - 5 items -->
@@ -62,6 +91,11 @@
         <!-- Right Radial Action Menu - 4 items -->
         <controls:RadialActionMenu x:Name="RightRadialMenu"
                                    Position="BottomRight"
+                                   ItemSelected="OnRadialMenuItemSelected"/>
+
+        <!-- Center Radial Action Menu - 4 items, arcs directly above -->
+        <controls:RadialActionMenu x:Name="CenterRadialMenu"
+                                   Position="Center"
                                    ItemSelected="OnRadialMenuItemSelected"/>
     </Grid>
 </Page>
