@@ -1,3 +1,5 @@
+> **Moved to uno-lab.** This project now lives in the `radial-action-menu/` folder of [noknowscode/uno-lab](https://github.com/noknowscode/uno-lab/tree/main/radial-action-menu) (private). This repository is archived and kept for its history.
+
 # Radial Action Menu
 
 A reusable, animated radial action menu control for Uno Platform applications.
